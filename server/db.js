@@ -29,6 +29,7 @@ const createTables = async () => {
         customer_id UUID REFERENCES customers(id) NOT NULL
     );
   `;
+  await client.query(SQL);
 };
 
 const createCustomer = async ({ name }) => {
