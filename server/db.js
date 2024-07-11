@@ -35,8 +35,7 @@ const createCustomer = async ({ name }) => {
   const SQL = `
           INSERT INTO customers(id, name) VALUES($1, $2) RETURNING *;
       `;
-  console.log("sql es" + SQL);
-  console.log("name" + name);
+
   const response = await client.query(SQL, [uuid.v4(), name]);
   return response.rows;
 };
@@ -70,14 +69,14 @@ const createReservation = async ({
 };
 
 const destroyReservation = async ({ id, customer_id }) => {
-    console.log(id, customer_id);
+  console.log(id, customer_id);
   const SQL = `
         DELETE from reservations
         WHERE id = $1 AND customer_id = $2;
       `;
 
-      const response = await client.query(SQL, [id, customer_id]);
-      return response.rows;
+  const response = await client.query(SQL, [id, customer_id]);
+  return response.rows;
 };
 
 const fetchRestaurants = async () => {

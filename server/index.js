@@ -16,6 +16,35 @@ const {
 
 const init = async () => {
   const response = await createTables();
+  //   const [Luisa, Alvaro, Cristina, Mariel, Coconut, Gaucho, CKF] =
+  //     await Promise.all([
+  //       createCustomer({ name: "Luisa" }),
+  //       createCustomer({ name: "Alvaro" }),
+  //       createCustomer({ name: "Cristina" }),
+  //       createCustomer({ name: "Mariel" }),
+  //       createRestaurant({ name: "Coconut" }),
+  //       createRestaurant({ name: "Gaucho" }),
+  //       createRestaurant({ name: "Savanna Jazz" }),
+  //     ]);
+
+  //   console.log(await fetchCustomers());
+  //   console.log(await fetchRestaurants());
+  //   const [reservation, reservation2] = await Promise.all([
+  //     createReservation({
+  //       customer_id: Juan.id,
+  //       restaurant_id: Gaucho.id,
+  //       date: "08/14/2024",
+  //       party_count: 12,
+  //     }),
+  //     createReservation({
+  //       customer_id: Mariel.id,
+  //       restaurant_id: Coconut.id,
+  //       date: "09/14/2024",
+  //       party_count: 15,
+  //     }),
+  //   ]);
+  //   console.log(await fetchReservations());
+
   app.listen(PORT, () => {
     console.log(`Hello from point number ${PORT}`);
   });
